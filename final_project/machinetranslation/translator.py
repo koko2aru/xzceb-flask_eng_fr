@@ -9,6 +9,22 @@ def english_to_french(english_text):
     
 def french_to_english(french_text):
     #Translator French to English
-    english_text = MyMemoryTranslator(source='FT-fr', target='GB-en').translate(french_text)
+    english_text = MyMemoryTranslator(source='FR-fr', target='GB-en').translate(french_text)
     print(english_text)
     return english_text
+
+#unit test.py
+import unittest
+from mymodule import english_to_french, french_to_english
+
+class TestEnglishToFrench(unittest.TestCase): 
+    def test1(self): 
+        self.assertEqual(english_to_french("Hello"), "Bonjour")
+        self.assertNotEqual(english_to_french("bad"), "bian")  
+
+class TestFrenchToEnglish(unittest.TestCase): 
+    def test1(self): 
+        self.assertEqual(french_to_english("Bonjour"), "Hello")
+        self.assertNotEqual(french_to_english("Bonjour"), "good") 
+        
+unittest.main()
