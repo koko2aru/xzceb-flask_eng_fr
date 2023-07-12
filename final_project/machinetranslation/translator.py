@@ -20,7 +20,7 @@ from mymodule import english_to_french, french_to_english
 class TestEnglishToFrench(unittest.TestCase): 
     def test1(self): 
         self.assertEqual(english_to_french("Hello"), "Bonjour")
-        self.assertNotEqual(english_to_french("bad"), "bian")  
+        self.assertNotEqual(english_to_french("Bad"), "Bonjour")  
 
 class TestFrenchToEnglish(unittest.TestCase): 
     def test1(self): 
