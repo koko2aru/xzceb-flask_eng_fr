@@ -15,7 +15,7 @@ def french_to_english(french_text):
 
 #unit test.py
 import unittest
-from mymodule import english_to_french, french_to_english
+from translator import english_to_french, french_to_english
 
 class TestEnglishToFrench(unittest.TestCase): 
     def test1(self): 
@@ -28,3 +28,6 @@ class TestFrenchToEnglish(unittest.TestCase):
         self.assertNotEqual(french_to_english("Bonjour"), "good") 
         
 unittest.main()
+
+#init __init__.py
+from . import translator
